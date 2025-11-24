@@ -1,0 +1,50 @@
+{
+  "name": "rray",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "license": "MIT",
+  "scripts": {
+    "dev": "tsx watch --exclude \"*.json\" --exclude \"./cache/*\" --exclude \"./app.log\" . ",
+    "start": "tsx . ",
+    "dev:debug": "node --inspect=9229 --enable-source-maps --expose-gc ./node_modules/tsx/dist/cli.cjs watch --exclude \"*.json\" --exclude \"./cache/*\" --exclude \"./app.log\" .",
+    "start:debug": "node --inspect=9229 --enable-source-maps --expose-gc ./node_modules/tsx/dist/cli.cjs .",
+    "debug:program": "node --inspect-brk=9229 --enable-source-maps --expose-gc --import=tsx ./index.ts",
+    "build": "bun ./scripts/build.ts && node --experimental-sea-config sea-config.json && node -e \"require('fs').copyFileSync(process.execPath, './dist/rhythia.exe')\" && npx postject ./dist/rhythia.exe NODE_SEA_BLOB sea-prep.blob --sentinel-fuse NODE_SEA_FUSE_fce680ab2cc467b6e072b8b5df1996b2 && tsx ./scripts/postbuild.ts"
+  },
+  "devDependencies": {
+    "@loglayer/transport-pretty-terminal": "^3.1.3",
+    "@raylib/api": "^5.5.0",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.2.1",
+    "@types/yieldable-json": "^2.0.2",
+    "esbuild": "^0.25.9"
+  },
+  "dependencies": {
+    "@pipobscure/sea": "^1.0.8",
+    "@supabase/supabase-js": "^2.46.1",
+    "bun": "^1.1.13",
+    "discord-rich-presence-typescript": "^0.0.8",
+    "express": "^5.1.0",
+    "loglayer": "^6.6.0",
+    "nativefiledialog": "xxCherry/nfd-bindings",
+    "open-file-manager-dialog": "^1.0.0",
+    "popups-file-dialog": "^1.7.7",
+    "raylib": "cunev/node-raylib",
+    "restructure": "^3.0.2",
+    "rhythia-api": "^208.0.0",
+    "serialize-error": "^12.0.0",
+    "sharp": "^0.34.3",
+    "simplevideo": "xxCherry/simplevideo",
+    "steamworks.js": "^0.4.0",
+    "tsx": "^4.20.4",
+    "winston": "^3.17.0",
+    "yieldable-json": "^2.1.0"
+  },
+  "sea": {
+    "executable": "seatest",
+    "assets": [],
+    "exclude": [],
+    "hash": true,
+    "compression": "brotli"
+  }
+}

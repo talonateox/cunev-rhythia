@@ -1,0 +1,8 @@
+{
+  "back": "KeyR",
+  "pause": "Escape",
+  "restart": "KeyF",
+  "skipIntro": "Space",
+  "openSettings": "Tab",
+  "toggleFullscreen": "F11"
+}
