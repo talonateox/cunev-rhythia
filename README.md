@@ -1,3 +1,10 @@
+# THIS IS NOT MY CODE
+This is a LEAK! from skmeone who is stealing
+the Rhythia IP. 
+
+I am aware this was mostly written by AI,
+me making this public is exposing that
+
 # RyRay
 
 Rhythia Runtime Engine
